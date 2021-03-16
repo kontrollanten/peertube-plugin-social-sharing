@@ -1,7 +1,11 @@
 import twitterIcon from '../assets/images/twitter.svg'
 import facebookIcon from '../assets/images/facebook.svg'
 
-async function register ({ registerHook }) {
+let translate
+
+async function register ({ registerHook, peertubeHelpers }) {
+  translate = peertubeHelpers.translate
+
   registerHook({
     target: 'action:router.navigation-end',
     handler: async ({ path }) => {
@@ -47,7 +51,7 @@ function createButton({ name, sharerLink, inputRef, iconHTML, filters }) {
   return button
 }
 
-function displayButtons(type) {
+async function displayButtons(type) {
   const modalContainer = document.querySelector(`ngb-modal-window .${type}`)
   // my-input-readonly-copy is for backward compatibility
   const inputToggleHidenElem = modalContainer.querySelector('my-input-toggle-hidden') || modalContainer.querySelector('my-input-readonly-copy')
@@ -84,6 +88,10 @@ function displayButtons(type) {
   container.appendChild(twitterButton)
 
   inputToggleHidenElem.parentElement.insertBefore(container, inputToggleHidenElem)
+  const copyLabel = document.createElement('label')
+  copyLabel.classList.add('share-link')
+  copyLabel.innerText = await translate('Share link')
+  inputToggleHidenElem.parentElement.insertBefore(copyLabel, inputToggleHidenElem)
 }
 
 function onModalOpen (callback) {
