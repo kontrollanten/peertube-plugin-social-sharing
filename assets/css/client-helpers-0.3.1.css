@@ -5,6 +5,7 @@ ngb-modal-window .playlist {
 
 ngb-modal-window .video-sharing-container {
   margin-bottom: 25px;
+  text-align: center;
 }
 
 ngb-modal-window .video-sharing {
