@@ -4,7 +4,7 @@
   "version": "0.6.1",
   "author": "kontrollanten",
   "license": "AGPL-3.0",
-  "bugs": "https://github.com/kimsible/peertube-social-sharing/issues",
+  "bugs": "https://github.com/kontrollanten/peertube-social-sharing/issues",
   "clientScripts": [
     {
       "script": "dist/common-client-plugin-0.6.1.js",
@@ -29,7 +29,7 @@
   "engine": {
     "peertube": ">=2.2.0"
   },
-  "homepage": "https://github.com/kimsible/peertube-plugin-social-sharing",
+  "homepage": "https://github.com/kontrollanten/peertube-plugin-social-sharing",
   "keywords": [
     "peertube",
     "plugin"
