@@ -1,7 +1,7 @@
 {
   "name": "peertube-plugin-social-sharing-ptv3",
   "description": "Share a video or playlist URL on social media Facebook and Twitter",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "author": "kontrollanten",
   "license": "AGPL-3.0",
   "bugs": "https://github.com/kontrollanten/peertube-social-sharing/issues",
